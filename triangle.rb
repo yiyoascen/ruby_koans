@@ -15,6 +15,9 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  a, b, c = [a, b, c].sort
+  raise TriangleError unless a > 0 && b > 0 && c > 0
+  raise TriangleError unless a + b > c
   if a == b && a == c
     :equilateral
   elsif a == b || a == c || c == b
